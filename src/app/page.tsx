@@ -7,7 +7,6 @@ import FAQ from "@/components/faq";
 import Footer from "@/components/footer";
 import { Hero } from "@/components/hero";
 import { Navbar } from "@/components/navbar";
-import { RegisterForm } from "@/components/register-form";
 import { Target } from "@/components/target";
 
 export default function Home() {
@@ -23,7 +22,6 @@ export default function Home() {
       <Activities />
       <FAQ />
       <Footer />
-      <RegisterForm />
     </div>
   );
 }
