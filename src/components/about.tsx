@@ -98,14 +98,18 @@ const text = [
     description: (
       <div>
         <p>
-          Nằm trong dự án K-Tech College, kết nối developers sang Hàn Quốc làm
-          việc cho các doanh nghiệp trong phân khúc vừa và nhỏ.
+          K-TECH JOB FAIR 2024 là sự kiện việc làm quy tụ nhiều doanh nghiệp Hàn
+          Quốc do Chính Phủ Hàn Quốc tổ chức. Đây là sự kiện đặc biệt nhằm kết
+          nối các doanh nghiệp Hàn Quốc tại Hàn Quốc và Việt Nam với các lập
+          trình viên Việt Nam tài năng.
         </p>
         <p>
-          K-Tech Job Fair sẽ là nơi để các lập trình viên, sinh viên Việt Nam
-          giao lưu, kết nối và mang đến cơ hội việc làm với các công ty công
-          nghệ đến từ Hàn Quốc.
+          K-Tech Job Fair 2024 sẽ là nơi để các lập trình viên, sinh viên Việt
+          Nam giao lưu, kết nối và tìm kiếm các đến cơ hội việc làm với mức
+          lương và chính sách đãi ngộ cực hấp dẫn tại các công ty công nghệ Hàn
+          Quốc.
         </p>
+        <p>Chương trình hoàn toàn miễn phí. Đăng ký tham gia ngay hôm nay!</p>
       </div>
     ),
 
@@ -129,12 +133,18 @@ export default function AboutUs() {
             // >
             <div
               className={cn(
-                "mx-auto text-gray-600 gap-x-12 items-start justify-between lg:flex md:pb-8",
-                idx % 2 != 1 && "lg:flex-row-reverse"
+                "mx-auto text-gray-600 gap-x-12 items-start justify-between lg:flex md:pb-8 flex-row"
+                // idx % 2 != 1 && "lg:flex-row-reverse"
               )}
             >
               <div className="hidden lg:block lg:max-w-xl">
-                <Image src={item.img} className="rounded-lg" alt={item.title} />
+                <Image
+                  src="https://res.cloudinary.com/dk3pxmymh/image/upload/v1719389862/likelion/ktc-jobfair-landing/Gio%CC%9B%CC%81i_thie%CC%A3%CC%82u_mk0321.png"
+                  className="rounded-lg"
+                  width={628}
+                  height={459}
+                  alt={item.title}
+                />
               </div>
 
               <div className="mt-6 gap-12 sm:mt-0 md:flex lg:block">
@@ -144,6 +154,16 @@ export default function AboutUs() {
                   </h3>
 
                   <div className="[&_p]:mb-3">{item.description}</div>
+                </div>
+
+                <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                  <Link
+                    href="#"
+                    className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                    prefetch={false}
+                  >
+                    Đăng ký ngay
+                  </Link>
                 </div>
               </div>
             </div>

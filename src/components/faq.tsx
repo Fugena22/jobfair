@@ -78,7 +78,7 @@ const FaqsCard = (props: FaqsCardProps) => {
 export default function FAQ() {
   const faqsList = [
     {
-      q: "Chương trình có yêu cầu về độ tuổi và kinh nghiệm của ứng viên không ạ?",
+      q: "Sự kiện có thu phí tham dự không?",
       a: (
         <div>
           <p>
@@ -93,27 +93,27 @@ export default function FAQ() {
       ),
     },
     {
-      q: "Các khoá đào tạo có mở thêm không ạ?",
+      q: "Yêu cầu khi đăng ký sự kiện?",
       a: "Chương trình chỉ được tổ chức một lần trong năm 2024 thôi, vậy nên hãy quyết định nhanh chóng bạn nhé.",
     },
     {
-      q: "Cuối khoá học có bài test đầu ra không ạ? Tiêu chí đánh giá ra sao?",
+      q: "Các công ty nào sẽ tham gia sự kiện này?",
       a: "Kết thúc khóa học, học viên sẽ tham gia phát triển dự án theo yêu cầu đề bài từ chính các doanh nghiệp. Đồng thời sẽ được kết nối tham gia phỏng vấn trực tiếp với các doanh nghiệp có như cầu tuyển dụng nhân lực.",
     },
     {
-      q: "Dự án thực tế trong khoá đào tạo có phải là do doanh nghiệp tuyển dụng ra đề?",
+      q: "Vị trí công việc nào sẽ có tại sự kiện?",
       a: "Đúng vậy. Doanh Nghiệp là người ra đề và học viên dựa theo yêu cầu để thực hiện. Sau đó, doanh nghiệp sẽ đánh giá dựa trên bài nhóm và năng lực từng cá nhân.",
     },
     {
-      q: "Khi phỏng vấn với doanh nghiệp cần dùng Tiếng Hàn và Tiếng Anh phải không ạ?",
+      q: "Vì sao cần đăng ký tham gia trước?",
       a: "Điều này còn dựa vào quy trình tuyển dụng của công ty bạn ứng tuyển, tuy nhiên sẽ có thông dịch viên Hàn-Việt hỗ trợ.",
     },
     {
-      q: "Khi làm việc tại Hàn có yêu cầu Tiếng Anh không?",
+      q: "Các công ty có yêu cầu ngoại ngữ lúc phỏng vấn không?",
       a: "Không yêu cầu, tuy nhiên có tiếng Anh cơ bản sẽ giúp bạn dễ dàng trao đổi công việc và thực hiện các sinh hoạt khác tại Hàn Quốc.",
     },
     {
-      q: "Chi phí học như thế nào?",
+      q: "Có yêu cầu phải tham dự toàn bộ sự kiện không?",
       a: (
         <div>
           <p>
@@ -159,12 +159,12 @@ export default function FAQ() {
       <div className="container">
         <div className="space-y-3 text-center">
           <h2 className="text-3xl text-gray-800 font-semibold">
-            Các câu hỏi thường gặp về dự án K-Tech College 2024
+            Các câu hỏi thường gặp
           </h2>
-          <p className="text-gray-600 max-w-lg mx-auto text-lg">
+          {/* <p className="text-gray-600 max-w-lg mx-auto text-lg">
             Dưới đây là những câu hỏi phổ biến về các khóa đào tạo lập trình và
             kết nối việc làm tại Hàn Quốc.
-          </p>
+          </p> */}
         </div>
         <div className="mt-14 max-w-2xl mx-auto">
           {faqsList.map((item, idx) => (

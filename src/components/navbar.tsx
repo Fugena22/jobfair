@@ -20,13 +20,19 @@ To read more about using these font, please visit the Next.js documentation:
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
+import Image from "next/image";
 
 export function Navbar() {
   return (
     <header className="flex items-center justify-between px-4 py-3 bg-background shadow-sm">
       <Link href="#" className="flex items-center gap-2" prefetch={false}>
         {/* <MountainIcon className="h-6 w-6" /> */}
-        <span className="text-lg font-medium">Acme Inc</span>
+        <Image
+          src="https://res.cloudinary.com/dk3pxmymh/image/upload/v1719397525/likelion/ktc-jobfair-landing/0a462b69-ae57-4af3-88ba-ae4d65decfc3.png"
+          alt="logo"
+          width={103}
+          height={40}
+        />
       </Link>
       <nav className="hidden md:flex items-center gap-4">
         <Link
@@ -34,28 +40,42 @@ export function Navbar() {
           className="text-sm font-medium hover:underline underline-offset-4"
           prefetch={false}
         >
-          Home
+          Giới thiệu
         </Link>
         <Link
           href="#"
           className="text-sm font-medium hover:underline underline-offset-4"
           prefetch={false}
         >
-          About
+          Danh sách doanh nghiệp
         </Link>
         <Link
           href="#"
           className="text-sm font-medium hover:underline underline-offset-4"
           prefetch={false}
         >
-          Contact
+          Lợi ích tham gia
+        </Link>
+        <Link
+          href="#"
+          className="text-sm font-medium hover:underline underline-offset-4"
+          prefetch={false}
+        >
+          Đối tượng
+        </Link>
+        <Link
+          href="#"
+          className="text-sm font-medium hover:underline underline-offset-4"
+          prefetch={false}
+        >
+          Hoạt động chính
         </Link>
         <Link
           href="#"
           className="inline-flex h-9 items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
           prefetch={false}
         >
-          Register
+          Đăng ký ngay
         </Link>
       </nav>
       <Button variant="outline" size="icon" className="md:hidden">
