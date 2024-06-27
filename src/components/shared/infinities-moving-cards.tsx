@@ -4,14 +4,21 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
+export interface IItem {
+  name: string;
+  url: string;
+}
+
 export const InfiniteMovingCards = ({
-  images,
+  items,
+  size = 150,
   direction = "left",
   speed = "fast",
   pauseOnHover = true,
   className,
 }: {
-  images: string[];
+  items: IItem[];
+  size?: number;
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
   pauseOnHover?: boolean;
@@ -83,17 +90,19 @@ export const InfiniteMovingCards = ({
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
       >
-        {images.map((image, idx) => (
+        {items.map((item, idx) => (
           <li
-            className="aspect-[4/3] w-[350px] max-w-full relative rounded-2xl flex-shrink-0 md:w-[450px]"
+            className="max-w-full relative rounded-2xl flex-shrink-0 text-center space-y-2"
             key={idx}
           >
             <Image
-              src={image}
-              alt="LIKELION Gallery"
-              fill
+              src={item.url}
+              alt={item.name}
+              width={size}
+              height={size}
               className="object-cover rounded-md"
             />
+            <h4>{item.name}</h4>
           </li>
         ))}
       </ul>

@@ -1,34 +1,20 @@
 import Link from "next/link";
 import { Button } from "./ui/button";
 import Image from "next/image";
-// import pattern from "/public/patterns/cta-pattern.jpg";
-// import leftLine from "/public/patterns/cta-pattern-left.svg";
-// import rightLine from "/public/patterns/cta-pattern-right.svg";
-import { site } from "@/components/config/site";
-// import AnimationLayout from "./shared/animation-layout";
 
 export default function CTA() {
   return (
     <section className="pt-14">
       <div className="container">
-        <div className="relative px-4 sm:px-8 py-8 sm:py-12 overflow-hidden md:px-8 rounded-3xl bg-[#101416]">
-          {/* <Image
-            src={pattern}
-            className="absolute inset-0 object-cover md:hidden"
-            alt="Background Pattern"
-            fill
-          />
+        <div className="relative px-8 sm:px-12  overflow-hidden md:px-24 rounded-3xl bg-black pb-80 sm:pb-40 md:pb-20 pt-8 sm:pt-12 md:pt-20">
           <Image
-            src={leftLine}
-            alt="Background Pattern"
-            className="absolute h-full top-0 -left-20 hidden md:block"
+            src="https://res.cloudinary.com/dk3pxmymh/image/upload/v1719389861/likelion/ktc-jobfair-landing/Elements_1_ip4atx.png"
+            alt="Pattern"
+            width={400}
+            height={400}
+            className="absolute right-0 bottom-0"
           />
-          <Image
-            src={rightLine}
-            alt="Background Pattern"
-            className="absolute h-full top-0 -right-20 hidden md:block"
-          /> */}
-          <div className="relative sm:max-w-lg max-w-sm">
+          <div className="relative sm:max-w-lg">
             <div className="sm:mb-8">
               <h3 className="text-2xl sm:text-3xl font-semibold text-gray-200 md:text-4xl">
                 ĐĂNG KÝ NGAY HÔM NAY
@@ -45,9 +31,9 @@ export default function CTA() {
                 nhận được các cơ hội việc làm hấp dẫn ngay tại sự kiện.
               </p>
             </div>
-            <div className="items-center justify-center gap-3 mt-4 sm:flex">
+            <div className="items-center gap-3 mt-4 sm:flex">
               <Button size="lg" className="w-full sm:w-auto" asChild>
-                <Link href={site.registrationUrl}>Đăng ký ngay</Link>
+                <Link href="/dang-ky">Đăng ký ngay</Link>
               </Button>
             </div>
           </div>

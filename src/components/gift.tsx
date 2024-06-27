@@ -1,13 +1,14 @@
 import Image from "next/image";
 import React from "react";
+import SectionHeading from "./section-heading";
 
 export default function Gift() {
   return (
     <section className="mt-40">
       <div className="container">
-        <div className="flex items-center justify-center">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-12">
           <div className="max-w-md space-y-6">
-            <h2 className="font-semibold">Quà tặng sự kiện</h2>
+            <SectionHeading>Quà tặng sự kiện</SectionHeading>
 
             <p>
               Tham gia ngày hội việc làm và nhận ngay những phần quà như bình

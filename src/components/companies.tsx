@@ -1,30 +1,64 @@
+import SectionHeading from "./section-heading";
 import { InfiniteMovingCards } from "./shared/infinities-moving-cards";
+interface Company {
+  name: string;
+  url: string;
+}
+
+export const companies = [
+  { name: "Apple", url: "/placeholder.svg" },
+  { name: "Microsoft", url: "/placeholder.svg" },
+  { name: "Amazon", url: "/placeholder.svg" },
+  { name: "Google", url: "/placeholder.svg" },
+  { name: "Facebook", url: "/placeholder.svg" },
+  { name: "Tesla", url: "/placeholder.svg" },
+  { name: "Netflix", url: "/placeholder.svg" },
+  { name: "IBM", url: "/placeholder.svg" },
+  { name: "Intel", url: "/placeholder.svg" },
+  { name: "Adobe", url: "/placeholder.svg" },
+  { name: "Oracle", url: "/placeholder.svg" },
+  { name: "Salesforce", url: "/placeholder.svg" },
+  { name: "Cisco", url: "/placeholder.svg" },
+  { name: "Nvidia", url: "/placeholder.svg" },
+  { name: "PayPal", url: "/placeholder.svg" },
+  { name: "Adobe", url: "/placeholder.svg" },
+  { name: "Uber", url: "/placeholder.svg" },
+  { name: "Twitter", url: "/placeholder.svg" },
+  { name: "Airbnb", url: "/placeholder.svg" },
+  { name: "Spotify", url: "/placeholder.svg" },
+  { name: "Dell", url: "/placeholder.svg" },
+  { name: "HP", url: "/placeholder.svg" },
+  { name: "Sony", url: "/placeholder.svg" },
+  { name: "Samsung", url: "/placeholder.svg" },
+  { name: "Toyota", url: "/placeholder.svg" },
+  { name: "Coca-Cola", url: "/placeholder.svg" },
+  { name: "Nike", url: "/placeholder.svg" },
+  { name: "McDonald's", url: "/placeholder.svg" },
+  { name: "Walmart", url: "/placeholder.svg" },
+  { name: "Visa", url: "/placeholder.svg" },
+];
+
+function splitCompanies(
+  companies: Company[],
+  numGroups: number = 3
+): Company[][] {
+  const result: Company[][] = Array.from({ length: numGroups }, () => []);
+
+  companies.forEach((company, index) => {
+    result[index % numGroups].push(company);
+  });
+
+  return result;
+}
 
 export default function Companies() {
-  const imageGroups = [
-    [
-      "/gallery/Bootcamp 2.jpg",
-      "/gallery/Bootcamp 3.jpg",
-      "/gallery/Bootcamp 4.jpg",
-      "/gallery/IUH MOU.jpg",
-      "/gallery/IUH.jpg",
-    ],
-    [
-      "/gallery/Shinhan 1.jpg",
-      "/gallery/Shinhan 2.jpg",
-      "/gallery/Shinhan MOU.jpg",
-      "/gallery/UIT 2.jpg",
-      "/gallery/USSH MOU.jpg",
-    ],
-  ];
   return (
     <div className="pb-14 rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
-      <div className="space-y-10 text-center">
-        <h2 className="font-semibold text-2xl">Các doanh nghiệp tham gia</h2>
-
-        <h2 className="font-bold text-4xl">
+      <div className="space-y-6 text-center">
+        <SectionHeading>Các doanh nghiệp tham gia</SectionHeading>
+        <p className="font-bold text-4xl">
           Tổng cộng 30 công ty tham gia Job Fair
-        </h2>
+        </p>
 
         <p className="text-center">
           20 công ty liên doanh đến từ Hàn Quốc <br />
@@ -32,10 +66,10 @@ export default function Companies() {
         </p>
       </div>
 
-      {imageGroups.map((images, idx) => (
+      {splitCompanies(companies).map((items, idx) => (
         <InfiniteMovingCards
           key={idx}
-          images={images}
+          items={items}
           direction={idx % 2 === 0 ? "right" : "left"}
           speed="slow"
           pauseOnHover={false}
