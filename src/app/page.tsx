@@ -1,4 +1,4 @@
-import AboutUs from "@/components/about";
+import About from "@/components/about";
 import { Activities } from "@/components/activities";
 import Benefits from "@/components/benefits";
 import { Collab } from "@/components/collab";
@@ -17,7 +17,7 @@ export default function Home() {
     <div>
       <Navbar />
       <Hero />
-      <AboutUs />
+      <About />
       <Collab />
       <Companies />
       <Benefits />
