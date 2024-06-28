@@ -17,7 +17,7 @@ export default function About() {
             <div className="hidden lg:block lg:max-w-xl">
               <Image
                 src="https://res.cloudinary.com/dk3pxmymh/image/upload/v1719389862/likelion/ktc-jobfair-landing/Gio%CC%9B%CC%81i_thie%CC%A3%CC%82u_mk0321.png"
-                className="rounded-lg"
+                className="rounded"
                 width={628}
                 height={459}
                 alt="Giới thiệu sự kiện K-Tech Job Fair 2024"

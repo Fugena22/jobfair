@@ -31,7 +31,7 @@ export function Collab() {
               width={200}
               height={50}
               alt={logo.alt}
-              className="aspect-[4/1] overflow-hidden rounded-lg object-contain object-center"
+              className="aspect-[4/1] overflow-hidden rounded object-contain object-center"
             />
           ))}
         </div>

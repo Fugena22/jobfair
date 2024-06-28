@@ -91,7 +91,7 @@ export function Hero() {
                 width="540"
                 height="400"
                 alt="Hero"
-                className="mx-auto aspect-[540/400] overflow-hidden rounded-xl object-cover sm:w-full lg:order-last"
+                className="mx-auto aspect-[540/400] overflow-hidden rounded object-cover sm:w-full lg:order-last"
               />
             </div>
             <div className="">

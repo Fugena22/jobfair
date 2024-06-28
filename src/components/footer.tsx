@@ -133,6 +133,16 @@ export default function Footer() {
             ))}
           </ul>
         </div>
+<<<<<<< Updated upstream
+=======
+        <img
+          src="/placeholder.svg"
+          width={500}
+          height={400}
+          alt="Contact"
+          className="mx-auto w-full max-w-[500px] rounded object-cover"
+        />
+>>>>>>> Stashed changes
       </div>
     </footer>
   );

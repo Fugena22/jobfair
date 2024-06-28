@@ -13,7 +13,7 @@ export function Activities() {
     <div className="container">
       <div className="flex flex-col items-center">
         <SectionHeading>Các hoạt động chính</SectionHeading>
-        <div className="border rounded-lg w-full max-w-3xl mx-auto">
+        <div className="border -lg w-full max-w-3xl mx-auto">
           <div className="relative w-full overflow-auto">
             <Table className="mx-auto max-w-full">
               <TableHeader>

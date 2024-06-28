@@ -6,7 +6,7 @@ export default function CTA() {
   return (
     <section className="pt-14">
       <div className="container">
-        <div className="relative px-8 sm:px-12  overflow-hidden md:px-24 rounded-3xl bg-black pb-80 sm:pb-40 md:pb-20 pt-8 sm:pt-12 md:pt-20">
+        <div className="relative px-8 sm:px-12  overflow-hidden md:px-24 rounded bg-black pb-80 sm:pb-40 md:pb-20 pt-8 sm:pt-12 md:pt-20">
           <Image
             src="https://res.cloudinary.com/dk3pxmymh/image/upload/v1719389861/likelion/ktc-jobfair-landing/Elements_1_ip4atx.png"
             alt="Pattern"

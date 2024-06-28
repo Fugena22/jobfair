@@ -49,7 +49,7 @@ export default function Benefits() {
             {features.map((item, idx) => (
               <li
                 key={idx}
-                className="p-6 rounded-md bg-orange-100 flex gap-6 items-center border-t-4"
+                className="p-6 rounded bg-orange-100 flex gap-6 items-center border-t-4"
               >
                 <div className="text-orange-400">{item.icon}</div>
                 <h4>{item.title}</h4>

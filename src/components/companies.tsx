@@ -53,7 +53,7 @@ function splitCompanies(
 
 export default function Companies() {
   return (
-    <div className="pb-14 rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+    <div className="pb-14 rounded flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
       <div className="space-y-6 text-center">
         <SectionHeading>Các doanh nghiệp tham gia</SectionHeading>
         <p className="font-bold text-4xl">

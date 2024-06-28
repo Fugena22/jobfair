@@ -28,6 +28,7 @@ import CVDropzone from "../cv-dropzone";
 import { useUploadThing } from "@/utils/uploadthing";
 import FormFieldInput from "./form-fields/form-field-input";
 import { useRouter } from "next/navigation";
+import FormItemWrapper from "./form-fields/form-item-wrapper";
 
 type IRegisterForm = z.infer<typeof registerFormSchema>;
 
@@ -90,6 +91,7 @@ export default function RegisterForm() {
           placeholder="Nguyễn Văn A"
           isSubmitting={isSubmitting}
           form={form}
+          required
         />
         <FormFieldInput
           name="phone"
@@ -97,6 +99,7 @@ export default function RegisterForm() {
           placeholder="0xxxxxxxxx"
           isSubmitting={isSubmitting}
           form={form}
+          required
         />
         <FormFieldInput
           name="email"
@@ -104,36 +107,33 @@ export default function RegisterForm() {
           placeholder="abc@gmail.com"
           isSubmitting={isSubmitting}
           form={form}
+          required
         />
         <FormField
           control={form.control}
           name="status"
           render={({ field }) => (
-            <FormItem className="space-y-3">
-              <FormLabel>Vị trí hiện tại</FormLabel>
-              <FormControl>
-                <RadioGroup
-                  onValueChange={field.onChange}
-                  defaultValue={field.value?.toString()}
-                  className="flex flex-col space-y-1"
-                >
-                  {STATUS_OPTIONS.map((status) => (
-                    <FormItem
-                      key={status.value}
-                      className="flex items-center space-x-3 space-y-0"
-                    >
-                      <FormControl>
-                        <RadioGroupItem value={status.value} />
-                      </FormControl>
-                      <FormLabel className="font-normal">
-                        {status.label}
-                      </FormLabel>
-                    </FormItem>
-                  ))}
-                </RadioGroup>
-              </FormControl>
-              <FormMessage />
-            </FormItem>
+            <FormItemWrapper label="Vị trí hiện tại" required>
+              <RadioGroup
+                onValueChange={field.onChange}
+                defaultValue={field.value?.toString()}
+                className="flex flex-col space-y-1"
+              >
+                {STATUS_OPTIONS.map((status) => (
+                  <FormItem
+                    key={status.value}
+                    className="flex items-center space-x-3 space-y-0"
+                  >
+                    <FormControl>
+                      <RadioGroupItem value={status.value} />
+                    </FormControl>
+                    <FormLabel className="font-normal">
+                      {status.label}
+                    </FormLabel>
+                  </FormItem>
+                ))}
+              </RadioGroup>
+            </FormItemWrapper>
           )}
         />
         <FormFieldInput
@@ -143,6 +143,7 @@ export default function RegisterForm() {
           type="number"
           isSubmitting={isSubmitting}
           form={form}
+          required
           // onChange={(e) => field.onChange(parseInt(e.target.value) || 0)}
         />
 
@@ -152,34 +153,21 @@ export default function RegisterForm() {
           placeholder="Công nghệ thông tin"
           isSubmitting={isSubmitting}
           form={form}
+          required
         />
 
         <FormField
           control={form.control}
           name="cv_file"
           render={({ field }) => (
-            <FormItem>
-              <FormLabel>Tải lên CV (Định dạng PDF)</FormLabel>
-              <FormControl>
-                {/* <Input
-                  type="file"
-                  accept=".pdf,.doc,.docx"
-                  multiple
-                  onChange={(e) => {
-                    const files = Array.from(e.target.files || []);
-                    field.onChange(files);
-                  }}
-                  disabled={isSubmitting}
-                /> */}
-                <CVDropzone
-                  isSubmitting={isSubmitting}
-                  onChange={(files) => {
-                    field.onChange(files[0]);
-                  }}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
+            <FormItemWrapper label="Tải lên CV (Định dạng PDF)" required>
+              <CVDropzone
+                disabled={isSubmitting}
+                onChange={(files) => {
+                  field.onChange(files[0]);
+                }}
+              />
+            </FormItemWrapper>
           )}
         />
         <Button type="submit" className="w-full" disabled={isSubmitting}>

@@ -100,7 +100,7 @@ export const InfiniteMovingCards = ({
               alt={item.name}
               width={size}
               height={size}
-              className="object-cover rounded-md"
+              className="object-cover rounded"
             />
             <h4>{item.name}</h4>
           </li>

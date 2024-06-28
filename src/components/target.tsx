@@ -29,7 +29,7 @@ export function Target() {
           width="563"
           height="420"
           alt="Target"
-          className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
+          className="mx-auto aspect-video overflow-hidden rounded object-cover object-center sm:w-full"
         />
         <div className="space-y-4">
           <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
@@ -39,7 +39,7 @@ export function Target() {
             {audiences.map((audience, idx) => (
               <li
                 key={idx}
-                className="p-6 rounded-md bg-orange-100 flex gap-6 items-center border-l-4"
+                className="p-6 rounded bg-orange-100 flex gap-6 items-center border-l-4"
               >
                 <div className="text-orange-400">{audience.icon}</div>
                 <h4>{audience.title}</h4>

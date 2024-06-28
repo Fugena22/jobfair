@@ -4,7 +4,6 @@ import Benefits from "@/components/benefits";
 import { Collab } from "@/components/collab";
 import Companies from "@/components/companies";
 import Connection from "@/components/connection";
-import Countdown from "@/components/countdown";
 import CTA from "@/components/cta";
 import FAQ from "@/components/faq";
 import Footer from "@/components/footer";

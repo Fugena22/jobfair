@@ -10,19 +10,21 @@ const FormFieldInput = ({
   type = "text",
   isSubmitting,
   form,
+  required,
 }: {
   name: string;
   label: string;
-  placeholder: string;
+  placeholder?: string;
   type?: string;
   isSubmitting: boolean;
   form: UseFormReturn<any>;
+  required?: boolean;
 }) => (
   <FormField
     control={form.control}
     name={name}
     render={({ field }) => (
-      <FormItemWrapper label={label}>
+      <FormItemWrapper label={label} required={required}>
         <Input
           placeholder={placeholder}
           type={type}
