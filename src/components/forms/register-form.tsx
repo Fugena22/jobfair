@@ -16,14 +16,12 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 
 // import { doc } from "@/lib/spreadsheet";
 import { useMutation } from "@tanstack/react-query";
-import { Loader2 } from "lucide-react";
 import axios from "axios";
 import {
   registerFormSchema,
   RegisterPostData,
   STATUS_OPTIONS,
 } from "@/lib/schemas";
-import { useDropzone } from "react-dropzone";
 import CVDropzone from "../cv-dropzone";
 import { useUploadThing } from "@/utils/uploadthing";
 import FormFieldInput from "./form-fields/form-field-input";
@@ -34,7 +32,7 @@ type IRegisterForm = z.infer<typeof registerFormSchema>;
 
 export default function RegisterForm() {
   const router = useRouter();
-  const { startUpload } = useUploadThing("pdfUploader", {
+  const { startUpload, isUploading } = useUploadThing("pdfUploader", {
     // onClientUploadComplete: () => {
     //   alert("uploaded successfully!");
     // },
@@ -53,20 +51,12 @@ export default function RegisterForm() {
       major: "",
     },
   });
-  const { acceptedFiles, getRootProps, getInputProps, isDragActive } =
-    useDropzone();
-
-  const files = acceptedFiles.map((file) => (
-    <li key={file.name}>
-      {file.name} - {file.size} bytes
-    </li>
-  ));
 
   const { mutate, isPending } = useMutation({
     mutationFn: async (data: RegisterPostData) =>
       axios.post("/api/register-form", data),
     onSuccess: () => {
-      router.push("/xin-cam-on");
+      router.push("/cam-on");
     },
   });
 
@@ -118,6 +108,7 @@ export default function RegisterForm() {
                 onValueChange={field.onChange}
                 defaultValue={field.value?.toString()}
                 className="flex flex-col space-y-1"
+                disabled={isSubmitting}
               >
                 {STATUS_OPTIONS.map((status) => (
                   <FormItem
@@ -171,8 +162,11 @@ export default function RegisterForm() {
           )}
         />
         <Button type="submit" className="w-full" disabled={isSubmitting}>
-          {isSubmitting && <Loader2 className="mr-2 size-4e animate-spin" />}
-          Đăng ký ngay
+          {isUploading
+            ? "Vui lòng đợi trong giây lát.. "
+            : isPending
+            ? "Dữ liệu đang được xử lí..."
+            : "Đăng ký ngay"}
         </Button>
       </form>
     </Form>

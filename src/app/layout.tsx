@@ -7,34 +7,31 @@ import { extractRouterConfig } from "uploadthing/server";
 import { ourFileRouter } from "@/app/api/uploadthing/core";
 import Countdown from "@/components/countdown";
 import { Navbar } from "@/components/navbar";
+import ThirdParties from "@/components/third-parties";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title:
-    "Dự Án Đào Tạo Miễn Phí Và Giới Thiệu Việc Làm IT Tại Hàn Quốc | K-Tech College",
+  title: "K-Tech Job Fair 2024: Code your future in Korea",
   description:
-    "Là dự án được tài trợ 100% bởi Bộ Doanh nghiệp vừa và nhỏ và khởi nghiệp Hàn Quốc. Người đăng ký tham gia sẽ được đào tạo miễn phí kiến thức lập trình Web/Back-end, và được giới thiệu việc làm đến các Doanh nghiệp tại Hàn Quốc. Nếu đạt kết quả đầu ra đúng yêu cầu tuyển dụng, người học sẽ được hỗ trợ chuẩn bị hồ sơ xét cấp visa và đào tạo bổ sung kỹ năng mềm như tiếng Hàn Quốc, văn hóa doanh nghiệp, kỹ năng phỏng vấn và kiến thức kinh doanh cơ bản. Chương trình nhằm đảm bảo cung cấp cho người học đây đủ các kiến thức và kỹ năng để có thể làm việc và hòa nhập tốt tại các doanh nghiệp ở Hàn Quốc. ",
+    "Sự kiện việc làm ngành công nghệ Hàn Quốc quy tụ hơn 30 công ty công nghệ Hàn Quốc do Chính phủ Hàn Quốc tài trợ, với hàng trăm cơ hội việc làm cho các lập trình viên tài năng của Việt Nam.",
   keywords: [
     "LIKELION",
     "Hàn Quốc",
     "việc làm",
-    "visa E-7",
-    "đào tạo lập trình miễn phí",
-    "đào tạo IT Hàn Quốc",
-    "chương trình đào tạo lập trình Hàn Quốc",
-    "việc làm IT Hàn Quốc",
-    "dự án đào tạo lập trình miễn phí",
-    "đào tạo lập trình web/back-end miễn phí",
-    "giới thiệu việc làm IT Hàn Quốc",
-    "đào tạo kỹ năng mềm Hàn Quốc",
-    "học lập trình đi làm việc Hàn Quốc",
-    "đào tạo lập trình nhận visa Hàn Quốc",
-    "đào tạo kỹ năng làm việc Hàn Quốc",
-    "khóa học lập trình hướng nghiệp Hàn Quốc",
-    "chương trình đào tạo nhân lực IT Hàn Quốc",
-    "đào tạo lập trình được tài trợ Hàn Quốc",
-    "dự án đào tạo nhân lực IT từ bộ doanh nghiệp Hàn Quốc",
+    "IT jobs",
+    "Korea IT job",
+    "ngày hội việc làm ngành công nghệ thông tin",
+    "cơ hội việc làm ngành công nghệ thông tin",
+    "K-Tech job fair",
+    "việc làm hàn quốc",
+    "việc làm lập trình viên",
+    "front-end dev",
+    "back-end dev",
+    "việc làm lập trình",
+    "job fair hàn quốc",
+    "job fair",
+    "k-tech job fair 2024",
   ],
   openGraph: {
     url: "./opengraph-image.jpg",
@@ -44,11 +41,10 @@ export const metadata: Metadata = {
     address: true,
     telephone: true,
   },
-  category: "education",
   referrer: "origin-when-cross-origin",
-  other: {
-    "google-site-verification": "To9bBudd-R7vTgpZ5KCCm4DUwwuMpfI44qhAU2EwfqE",
-  },
+  // other: {
+  //   "google-site-verification": "To9bBudd-R7vTgpZ5KCCm4DUwwuMpfI44qhAU2EwfqE",
+  // },
 };
 
 export default function RootLayout({
@@ -60,18 +56,11 @@ export default function RootLayout({
     <Providers>
       <html lang="en">
         <body className={inter.className}>
-          <NextSSRPlugin
-            /**
-             * The `extractRouterConfig` will extract **only** the route configs
-             * from the router to prevent additional information from being
-             * leaked to the client. The data passed to the client is the same
-             * as if you were to fetch `/api/uploadthing` directly.
-             */
-            routerConfig={extractRouterConfig(ourFileRouter)}
-          />
+          <NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />
           <Countdown />
           <Navbar />
           {children}
+          <ThirdParties />
         </body>
       </html>
     </Providers>

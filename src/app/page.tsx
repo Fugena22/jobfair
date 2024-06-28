@@ -9,6 +9,7 @@ import FAQ from "@/components/faq";
 import Footer from "@/components/footer";
 import Gift from "@/components/gift";
 import { Hero } from "@/components/hero";
+import Steps from "@/components/steps";
 import { Target } from "@/components/target";
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
       <Benefits />
       <Target />
       <Activities />
+      <Steps />
       <CTA />
       <Gift />
       <FAQ />
