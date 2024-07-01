@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import SectionHeading from "./section-heading";
+import { Button } from "./ui/button";
 
 export default function Connection() {
   return (
@@ -31,13 +32,9 @@ export default function Connection() {
             </div>
 
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
-              <Link
-                href="#"
-                className="inline-flex h-10 items-center justify-center rounded bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                prefetch={false}
-              >
-                Tham gia ngay
-              </Link>
+              <Button asChild>
+                <Link href="/">Tham gia ngay</Link>
+              </Button>
             </div>
           </div>
 
