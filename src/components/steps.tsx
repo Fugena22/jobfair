@@ -24,7 +24,7 @@ export default function Steps() {
   return (
     <div className="my-12">
       <div className="container">
-        <div className="">
+        <div className="mt-24">
           <SectionHeading className="text-center mb-8">
             Các bước tham gia
           </SectionHeading>

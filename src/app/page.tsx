@@ -15,7 +15,7 @@ import { Target } from "@/components/target";
 
 export default function Home() {
   return (
-    <div>
+    <div className="space-y-6 bg-white dark:bg-black dark:bg-grid-white/[0.05]">
       <Hero />
       <About />
       <Collab />
