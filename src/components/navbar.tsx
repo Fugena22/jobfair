@@ -9,11 +9,11 @@ import { Menu } from "lucide-react";
 import { usePathname, useRouter } from "next/navigation";
 
 const navItems = [
-  { href: "#", text: "Giới thiệu" },
-  { href: "#", text: "Danh sách doanh nghiệp" },
-  { href: "#", text: "Lợi ích tham gia" },
-  { href: "#", text: "Đối tượng" },
-  { href: "#", text: "Hoạt động chính" },
+  { href: "#gioi-thieu", text: "Giới thiệu" },
+  { href: "#danh-sach-doanh-nghiep", text: "Danh sách doanh nghiệp" },
+  { href: "#loi-ich-tham-gia", text: "Lợi ích tham gia" },
+  { href: "#doi-tuong", text: "Đối tượng" },
+  { href: "#hoat-dong-chinh", text: "Hoạt động chính" },
 ];
 
 const matchRoutes = ["/"];
