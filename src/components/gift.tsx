@@ -4,15 +4,16 @@ import SectionHeading from "./section-heading";
 
 export default function Gift() {
   return (
-    <section className="mt-40">
+    <section className="mt-40 bg-orange-50">
       <div className="container">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-12">
-          <div className="max-w-md space-y-6">
+          <div className="max-w-[21rem] space-y-6">
             <SectionHeading>Quà tặng sự kiện</SectionHeading>
-
             <p>
-              Tham gia ngày hội việc làm và nhận ngay những phần quà như bình
-              nước, ly, sổ, và nhiều phần quà giá trị khác từ các nhà tài trợ.
+              Tham gia K-TECH JOB FAIR 2024, ngoài cơ hội có được việc làm siêu
+              xịn tại Hàn Quốc, bạn còn được tham gia các Minigame và nhận nhiều
+              phần quà cực kỳ hấp dẫn từ ban tổ chức và các công ty tham gia sự
+              kiện.
             </p>
           </div>
 

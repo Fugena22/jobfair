@@ -79,71 +79,31 @@ export default function FAQ() {
   const faqsList = [
     {
       q: "Sự kiện có thu phí tham dự không?",
-      a: (
-        <div>
-          <p>
-            Dự án tiếp nhận ứng viên dưới 35 tuổi, lý lịch rõ ràng, không có
-            tiền án tiền sự.
-          </p>
-          <p>
-            Quá trình xét tuyển bao gồm thẩm định hồ sơ, kiểm tra đầu vào và
-            phỏng vấn chuyên sâu, không yêu cầu số năm kinh nghiệm cụ thể.
-          </p>
-        </div>
-      ),
+      a: "Sự kiện này hoàn toàn miễn phí bạn nhé.",
     },
     {
       q: "Yêu cầu khi đăng ký sự kiện?",
-      a: "Chương trình chỉ được tổ chức một lần trong năm 2024 thôi, vậy nên hãy quyết định nhanh chóng bạn nhé.",
+      a: "Bạn chỉ cần đăng ký thông tin trên website, lưu lại ngày giờ và địa điểm để đến tham dự thôi.",
     },
     {
       q: "Các công ty nào sẽ tham gia sự kiện này?",
-      a: "Kết thúc khóa học, học viên sẽ tham gia phát triển dự án theo yêu cầu đề bài từ chính các doanh nghiệp. Đồng thời sẽ được kết nối tham gia phỏng vấn trực tiếp với các doanh nghiệp có như cầu tuyển dụng nhân lực.",
+      a: "Tất cả là công ty công nghệ Hàn Quốc có trụ sở tại Hàn Quốc hoặc Việt Nam.",
     },
     {
       q: "Vị trí công việc nào sẽ có tại sự kiện?",
-      a: "Đúng vậy. Doanh Nghiệp là người ra đề và học viên dựa theo yêu cầu để thực hiện. Sau đó, doanh nghiệp sẽ đánh giá dựa trên bài nhóm và năng lực từng cá nhân.",
+      a: "Hàng trăm vị trí công việc tại Hàn Quốc hoặc Việt Nam dành cho các bạn lập trình viên tài năng, kể cả các bạn mới ra trường hoặc đã có nhiều năm kinh nghiệm.",
     },
     {
       q: "Vì sao cần đăng ký tham gia trước?",
-      a: "Điều này còn dựa vào quy trình tuyển dụng của công ty bạn ứng tuyển, tuy nhiên sẽ có thông dịch viên Hàn-Việt hỗ trợ.",
+      a: "Đăng ký & tải lên CV của bạn trên website giúp nhà tuyển dụng có thể xem và đánh giá trước năng lực của bạn trước ngày hội, giành lợi thế trước các ứng viên khác và gia tăng cơ hội có được việc làm ngay tại sự kiện",
     },
     {
       q: "Các công ty có yêu cầu ngoại ngữ lúc phỏng vấn không?",
-      a: "Không yêu cầu, tuy nhiên có tiếng Anh cơ bản sẽ giúp bạn dễ dàng trao đổi công việc và thực hiện các sinh hoạt khác tại Hàn Quốc.",
+      a: "Các bạn tham gia sự kiện không cần phải có ngoại ngữ vì các công ty đã có sẵn phiên dịch viên để hỗ trợ ứng viên tìm hiểu thông tin và phỏng vấn ngay tại bàn.",
     },
     {
       q: "Có yêu cầu phải tham dự toàn bộ sự kiện không?",
-      a: (
-        <div>
-          <p>
-            Học phí cho toàn bộ quá trình đào tạo và kết nối việc làm là 0 đồng.
-          </p>
-          <p>
-            Tuy nhiên để đảm bảo học viên nghiêm túc tham gia và hoàn thành lộ
-            trình dự án, chúng tôi sẽ yêu cầu học viên ký kết hợp đồng nhằm cam
-            kết hoàn thành trọn vẹn lộ trình khóa học:
-          </p>
-          <ul className="list-disc pl-4">
-            <li className="">Đảm bảo tham gia trên 90% các buổi học.</li>
-            <li>
-              Tham gia đầy đủ các sự kiện trong suốt quá trình học: Ideathon,
-              Kiểm tra giữa kỳ, Hackathon và hoàn thành dự án cuối khóa.
-            </li>
-            <li>
-              Tham gia đầy đủ các chương trình đào tạo bổ trợ: đào tạo tiếng Hàn
-              cơ bản, Hướng dẫn chuẩn bị hồ sơ phỏng vấn, Bài giảng về văn hóa
-              tại Doanh nghiệp Hàn Quốc, Bài giảng về kiến thức business cập
-              nhật hiện nay.
-            </li>
-          </ul>
-          <p>
-            Trường hợp học viên không hoàn thành những cam kết này theo nội dung
-            Hợp đồng, học viên có trách nhiệm bồi hoàn một khoản chi phí tổ chức
-            cho chúng tôi (có ghi rõ trong hợp đồng cam kết)
-          </p>
-        </div>
-      ),
+      a: "Chương trình không bắt buộc các bạn tham gia toàn bộ sự kiện. Ban tổ chức khuyến khích các bạn dành thời gian tham khảo các cơ hội việc làm tại tất cả công ty để tìm được việc làm phù hợp nhất với bạn.",
     },
   ];
 
