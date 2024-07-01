@@ -8,6 +8,7 @@ import { ourFileRouter } from "@/app/api/uploadthing/core";
 import Countdown from "@/components/countdown";
 import { Navbar } from "@/components/navbar";
 import ThirdParties from "@/components/third-parties";
+import { cn } from "@/lib/utils";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -55,7 +56,7 @@ export default function RootLayout({
   return (
     <Providers>
       <html lang="en">
-        <body className={inter.className}>
+        <body className={cn(inter.className, "overflow-x-hidden")}>
           <NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />
           <Countdown />
           <Navbar />

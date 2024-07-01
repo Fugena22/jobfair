@@ -2,6 +2,7 @@ import { Calendar, Clock, Leaf, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "./ui/button";
+import { InfiniteMovingTexts } from "./shared/infinities-moving-texts";
 
 const tags = [
   {
@@ -41,9 +42,15 @@ const tags = [
   },
 ];
 
+const eventDetails = [
+  { icon: Calendar, text: "Thứ Năm, ngày 25/07/2024" },
+  { icon: Clock, text: "09:00 ~ 16:00" },
+  { icon: MapPin, text: "Khách sạn Lotte Sài Gòn" },
+];
+
 export function Hero() {
   return (
-    <section className="w-full py-12 md:py-20">
+    <section className="w-full py-12 md:py-20 bg-neutral-950 text-neutral-100">
       <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-12">
         <div className="space-y-4 max-w-sm mx-auto text-center lg:text-left flex flex-col items-center lg:items-start lg:mx-0">
           <Image
@@ -56,7 +63,7 @@ export function Hero() {
           <h3 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-3xl">
             Code your dream in Korea
           </h3>
-          <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+          <p className="md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
             Sự kiện việc làm IT lớn nhất năm, xây dựng sự nghiệp tại Hàn Quốc
           </p>
 
@@ -67,38 +74,37 @@ export function Hero() {
           </div>
 
           <div className="space-y-2">
-            <div className="flex items-center gap-2">
-              <Calendar className="size-5 text-muted-foreground" />
-              <p className="text-muted-foreground">Thứ Năm, ngày 25/07/2024</p>
-            </div>
-
-            <div className="flex items-center gap-2">
-              <Clock className="size-5 text-muted-foreground" />
-              <p className="text-muted-foreground">09:00 ~ 16:00</p>
-            </div>
-
-            <div className="flex items-center gap-2">
-              <MapPin className="size-5 text-muted-foreground" />
-              <p className="text-muted-foreground">Khách sạn Lotte Sài Gòn</p>
-            </div>
+            {eventDetails.map(({ icon: Icon, text }, index) => (
+              <div key={index} className="flex items-center gap-2">
+                <Icon className="size-5" />
+                <p>{text}</p>
+              </div>
+            ))}
           </div>
         </div>
         <div>
-          <div className="relative max-w-lg mx-auto mt-20 lg:mt-0">
-            <div>
+          <div className="relative max-w-lg mx-auto mt-4 sm:mt-20 lg:mt-0">
+            {/* Tags mobile */}
+            <div className="sm:hidden -mx-8 mb-8">
+              <InfiniteMovingTexts texts={tags.map((tag) => tag.content)} />
+            </div>
+
+            <div className="w-full aspect-[1202/926] overflow-hidden">
               <Image
-                src="https://res.cloudinary.com/dk3pxmymh/image/upload/v1719389862/likelion/ktc-jobfair-landing/Hero_bfnqh8.png"
-                width="540"
-                height="400"
+                src="https://res.cloudinary.com/dk3pxmymh/image/upload/v1719805085/likelion/ktc-jobfair-landing/Hero%20image.png"
+                width="1202"
+                height="926"
                 alt="Hero"
-                className="mx-auto aspect-[540/400] overflow-hidden rounded object-cover sm:w-full lg:order-last"
+                className="mx-auto rounded object-cover w-full lg:order-last"
               />
             </div>
-            <div className="">
+
+            {/* Tags desktop */}
+            <div className="hidden sm:block">
               {tags.map((tag, idx) => (
                 <div
                   key={idx}
-                  className="absolute bg-black text-white p-2 lg:p-2 max-w-[180px] text-center text-balance rounded"
+                  className="absolute bg-neutral-950 text-neutral-50 p-2 lg:p-2 max-w-[180px] text-center text-balance rounded border border-orange-400 shadow-[4px_8px_12px_97,0,0.20]"
                   style={tag.position}
                 >
                   {tag.content}

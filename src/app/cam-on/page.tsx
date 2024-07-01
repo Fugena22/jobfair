@@ -5,7 +5,7 @@ import React from "react";
 
 export default function Thankyou() {
   return (
-    <div className="border max-w-xl flex flex-col items-center justify-center mx-auto text-center space-y-8">
+    <div className="max-w-xl flex flex-col items-center justify-center mx-auto text-center space-y-8 py-20">
       <h2 className="uppercase text-4xl">likelion cảm ơn!</h2>
       <Image
         src="https://res.cloudinary.com/dk3pxmymh/image/upload/v1719389973/likelion/ktc-jobfair-landing/Thank%20you%20form.png"

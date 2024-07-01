@@ -22,12 +22,12 @@ export function Navbar() {
   const pathname = usePathname();
   const isMatch = matchRoutes.includes(pathname);
   return (
-    <header className="bg-background shadow-sm">
+    <header className="shadow-sm bg-neutral-950 text-neutral-100">
       <div className="container">
         <div className="flex items-center justify-between gap-2 py-4">
           <Link href="/" className="flex items-center gap-2">
             <Image
-              src="https://res.cloudinary.com/dk3pxmymh/image/upload/v1719397525/likelion/ktc-jobfair-landing/KTC%20-%20PNG.png"
+              src="https://res.cloudinary.com/dk3pxmymh/image/upload/v1719546783/likelion/ktc-jobfair-landing/LOGO/KTC_-_White_Logo_eggmte.svg"
               alt="logo"
               width={103}
               height={40}
@@ -51,7 +51,11 @@ export function Navbar() {
               </nav>
               <Sheet>
                 <SheetTrigger asChild>
-                  <Button variant="outline" size="icon" className="md:hidden">
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    className="md:hidden text-neutral-900"
+                  >
                     <Menu className="h-6 w-6" />
                     <span className="sr-only">Toggle navigation menu</span>
                   </Button>

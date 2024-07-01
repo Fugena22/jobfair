@@ -30,11 +30,8 @@ export default function Steps() {
           </SectionHeading>
           <ol className="flex flex-col gap-2 lg:flex-row  max-w-lg mx-auto lg:max-w-none lg:gap-6">
             {steps.map((step, idx) => (
-              <>
-                <li
-                  key={idx}
-                  className="flex-1 flex items-center gap-8 lg:flex-col lg:gap-2 lg:items-start text-sm lg:text-base"
-                >
+              <li key={idx}>
+                <div className="flex-1 flex items-center gap-8 lg:flex-col lg:gap-2 lg:items-start text-sm lg:text-base">
                   <div className="flex items-center lg:w-full gap-2">
                     <div className="size-14 rounded-full text-2xl grid place-items-center bg-primary text-primary-foreground shrink-0">
                       {step.icon}
@@ -49,13 +46,13 @@ export default function Steps() {
                   <div className="border border-orange-200 bg-orange-50 p-4 w-full">
                     {step.text}
                   </div>
-                </li>
+                </div>
                 {idx < steps.length - 1 && (
                   <div className="relative h-10 w-1 ml-7 border-l-2 border-dashed border-orange-300 lg:hidden">
                     <div className="h-0 w-0 border-x-[6px] border-x-transparent border-t-[12px] border-t-orange-300 absolute bottom-0 -left-1/2 -translate-x-1/2 translate-y-1/2"></div>
                   </div>
                 )}
-              </>
+              </li>
             ))}
           </ol>
         </div>
