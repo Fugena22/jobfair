@@ -4,6 +4,7 @@ import Benefits from "@/components/benefits";
 import { Collab } from "@/components/collab";
 import Companies from "@/components/companies";
 import Connection from "@/components/connection";
+import Contact from "@/components/contact";
 import CTA from "@/components/cta";
 import FAQ from "@/components/faq";
 import Footer from "@/components/footer";
@@ -27,6 +28,7 @@ export default function Home() {
       <Gift />
       <FAQ />
       <Connection />
+      <Contact />
       <Footer />
     </div>
   );
