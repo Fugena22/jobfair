@@ -59,7 +59,10 @@ export default function RootLayout({
     <Providers>
       <html lang="en">
         <body
-          className={cn(inter.className, "overflow-x-hidden mb-10 sm:mb-0")}
+          className={cn(
+            inter.className,
+            "overflow-x-hidden mb-10 sm:mb-0 bg-background text-foreground"
+          )}
         >
           <NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />
           <Countdown />

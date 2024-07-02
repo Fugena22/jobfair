@@ -4,9 +4,9 @@ import SectionHeading from "./section-heading";
 
 export default function Gift() {
   return (
-    <section className="mt-40 bg-orange-50">
+    <section className="bg-orange-50">
       <div className="container">
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-12">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-12 py-10">
           <div className="max-w-[21rem] space-y-6">
             <SectionHeading>Quà tặng sự kiện</SectionHeading>
             <p>

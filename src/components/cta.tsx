@@ -16,15 +16,15 @@ export default function CTA() {
           />
           <div className="relative sm:max-w-lg">
             <div className="sm:mb-8">
-              <h3 className="text-2xl sm:text-3xl font-semibold text-gray-200 md:text-4xl">
+              <h3 className="text-2xl sm:text-3xl font-semibold md:text-4xl">
                 ĐĂNG KÝ NGAY HÔM NAY
               </h3>
 
-              <p className="mt-4 leading-relaxed text-gray-300">
+              <p className="mt-4 leading-relaxed">
                 CV của bạn sẽ được screening trước khi sự kiện diễn ra
               </p>
 
-              <p className="mt-6 text-gray-300">
+              <p className="mt-6">
                 Sau khi điền form đăng ký, doanh nghiệp có thể xem được thông
                 tin của bạn để đánh giá mức độ phù hợp. Do đó bạn nên đăng ký
                 sớm để tạo lợi thế trước các ứng viên khác và gia tăng cơ hội

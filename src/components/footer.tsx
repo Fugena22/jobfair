@@ -32,7 +32,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="text-gray-500 bg-white pb-5 mx-auto">
+    <footer className="pb-5 mx-auto">
       <div className="container">
         <div className="mt-8 items-center justify-between sm:flex border-t pt-4">
           <div className="mt-4 sm:mt-0">

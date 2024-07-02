@@ -22,7 +22,7 @@ const audiences = [
 
 export function Target() {
   return (
-    <section id="doi-tuong" className="w-full py-12 md:py-24 lg:py-32">
+    <section id="doi-tuong" className="w-full py-6 sm:py-12 md:py-24 lg:py-32">
       <div className="container lg:grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-12 hidden">
         <Image
           src="https://res.cloudinary.com/dk3pxmymh/image/upload/v1719557375/likelion/ktc-jobfair-landing/%C4%90%E1%BB%91i%20t%C6%B0%E1%BB%A3ng%20tham%20gia.png"

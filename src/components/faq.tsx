@@ -1,6 +1,5 @@
 "use client";
 import { ReactNode, useRef, useState } from "react";
-// import AnimationLayout from "./shared/animation-layout";
 
 interface FaqsCardProps {
   faqsList: {
@@ -28,14 +27,14 @@ const FaqsCard = (props: FaqsCardProps) => {
   return (
     <div className="space-y-3 mt-5 overflow-hidden border-b" key={idx}>
       <h4
-        className="cursor-pointer pb-5 flex items-center justify-between text-lg text-gray-700 font-medium"
+        className="cursor-pointer pb-5 flex items-center justify-between text-lg font-medium"
         onClick={handleOpenAnswer}
       >
         {faqsList.q}
         {state ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5 text-gray-500 ml-2 shrink-0"
+            className="h-5 w-5 ml-2 shrink-0"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -50,7 +49,7 @@ const FaqsCard = (props: FaqsCardProps) => {
         ) : (
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5 text-gray-500 ml-2 shrink-0"
+            className="h-5 w-5 ml-2 shrink-0"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -69,7 +68,7 @@ const FaqsCard = (props: FaqsCardProps) => {
         className="duration-300"
         style={state ? { height: answerH } : { height: "0px" }}
       >
-        <div className="text-gray-500">{faqsList.a}</div>
+        <div className="">{faqsList.a}</div>
       </div>
     </div>
   );
@@ -109,22 +108,9 @@ export default function FAQ() {
 
   return (
     <section className="leading-relaxed sm:py-20 pt-14" id="faqs">
-      {/* <AnimationLayout
-        className="duration-1000 delay-300"
-        isInviewState={{
-          trueState: "opacity-1",
-          falseState: "opacity-0 translate-y-12",
-        }}
-      > */}
       <div className="container">
         <div className="space-y-3 text-center">
-          <h2 className="text-3xl text-gray-800 font-semibold">
-            Các câu hỏi thường gặp
-          </h2>
-          {/* <p className="text-gray-600 max-w-lg mx-auto text-lg">
-            Dưới đây là những câu hỏi phổ biến về các khóa đào tạo lập trình và
-            kết nối việc làm tại Hàn Quốc.
-          </p> */}
+          <h2 className="text-3xl font-semibold">Các câu hỏi thường gặp</h2>
         </div>
         <div className="mt-14 max-w-2xl mx-auto">
           {faqsList.map((item, idx) => (
@@ -132,7 +118,6 @@ export default function FAQ() {
           ))}
         </div>
       </div>
-      {/* </AnimationLayout> */}
     </section>
   );
 }

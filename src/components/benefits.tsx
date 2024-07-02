@@ -6,6 +6,7 @@ import {
   Network,
   Star,
 } from "lucide-react";
+import SectionHeading from "./section-heading";
 
 export default function Benefits() {
   const features = [
@@ -37,12 +38,10 @@ export default function Benefits() {
   ];
 
   return (
-    <section id="loi-ich-tham-gia" className="py-14">
-      <div className="container text-gray-600">
+    <section id="loi-ich-tham-gia" className="lg:py-14">
+      <div className="container">
         <div className="max-w-2xl mx-auto md:text-center text-left">
-          <h2 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
-            Lợi ích của người tham gia
-          </h2>
+          <SectionHeading>Lợi ích của người tham gia</SectionHeading>
         </div>
         <div className="mt-12">
           <ul className="grid gap-y-4 sm:gap-y-8 gap-x-12 sm:grid-cols-2 lg:grid-cols-3">

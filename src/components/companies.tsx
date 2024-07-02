@@ -54,7 +54,7 @@ function splitCompanies(
 export default function Companies() {
   return (
     <section id="danh-sach-doanh-nghiep">
-      <div className="pb-14 rounded flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden space-y-10">
+      <div className="pb-14 rounded flex flex-col antialiased  items-center justify-center relative overflow-hidden space-y-10">
         <div className="space-y-6 text-center">
           <SectionHeading>Các doanh nghiệp tham gia</SectionHeading>
           <p className="font-bold text-4xl">
@@ -66,16 +66,17 @@ export default function Companies() {
             10 công ty liên doanh Hàn Quốc tại Việt Nam
           </p>
         </div>
-
-        {splitCompanies(companies).map((items, idx) => (
-          <InfiniteMovingCards
-            key={idx}
-            items={items}
-            direction={idx % 2 === 0 ? "right" : "left"}
-            speed="slow"
-            pauseOnHover={false}
-          />
-        ))}
+        <div className="space-y-2">
+          {splitCompanies(companies).map((items, idx) => (
+            <InfiniteMovingCards
+              key={idx}
+              items={items}
+              direction={idx % 2 === 0 ? "right" : "left"}
+              speed="slow"
+              pauseOnHover={false}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

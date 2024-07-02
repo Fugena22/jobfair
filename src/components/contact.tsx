@@ -1,6 +1,7 @@
 import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import GoogleMap from "./shared/google-map";
 import Image from "next/image";
+import SectionHeading from "./section-heading";
 
 export default function Contact() {
   const contactMethods = [
@@ -44,7 +45,7 @@ export default function Contact() {
 
   return (
     <section className="py-14">
-      <div className="container text-gray-600 space-y-10">
+      <div className="container space-y-10">
         <div className="flex items-center justify-center gap-8 md:gap-24">
           {partnerLogos.map((logo, index) => (
             <Image
@@ -60,9 +61,7 @@ export default function Contact() {
         <div className="grid md:grid-cols-2 gap-8">
           <div>
             <div className="max-w-xl space-y-3">
-              <h2 className="text-gray-800 text-2xl sm:text-3xl font-semibold">
-                Liên hệ
-              </h2>
+              <SectionHeading>Liên hệ</SectionHeading>
               {/* <p>
                 We’re here to help and answer any question you might have, We
                 look forward to hearing from you .
@@ -72,11 +71,11 @@ export default function Contact() {
               <ul className="mt-4 sm:mt-8 flex flex-col flex-wrap gap-y-2 sm:gap-y-4">
                 {contactMethods.map((item, idx) => (
                   <li key={idx}>
-                    <h4 className="sr-only text-gray-800 text-lg font-medium">
+                    <h4 className="sr-only text-lg font-medium">
                       {item.title}
                     </h4>
                     <div className="mt-2 flex items-center gap-x-3">
-                      <div className="flex-none text-gray-400">{item.icon}</div>
+                      <div className="flex-none">{item.icon}</div>
                       <p>{item.contact}</p>
                     </div>
                   </li>
