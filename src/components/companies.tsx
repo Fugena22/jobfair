@@ -53,28 +53,30 @@ function splitCompanies(
 
 export default function Companies() {
   return (
-    <div className="pb-14 rounded flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
-      <div className="space-y-6 text-center">
-        <SectionHeading>Các doanh nghiệp tham gia</SectionHeading>
-        <p className="font-bold text-4xl">
-          Tổng cộng 30 công ty tham gia Job Fair
-        </p>
+    <section id="danh-sach-doanh-nghiep">
+      <div className="pb-14 rounded flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden space-y-10">
+        <div className="space-y-6 text-center">
+          <SectionHeading>Các doanh nghiệp tham gia</SectionHeading>
+          <p className="font-bold text-4xl">
+            Tổng cộng 30 công ty tham gia Job Fair
+          </p>
 
-        <p className="text-center">
-          20 công ty liên doanh đến từ Hàn Quốc <br />
-          10 công ty liên doanh Hàn Quốc tại Việt Nam
-        </p>
+          <p className="text-center">
+            20 công ty liên doanh đến từ Hàn Quốc <br />
+            10 công ty liên doanh Hàn Quốc tại Việt Nam
+          </p>
+        </div>
+
+        {splitCompanies(companies).map((items, idx) => (
+          <InfiniteMovingCards
+            key={idx}
+            items={items}
+            direction={idx % 2 === 0 ? "right" : "left"}
+            speed="slow"
+            pauseOnHover={false}
+          />
+        ))}
       </div>
-
-      {splitCompanies(companies).map((items, idx) => (
-        <InfiniteMovingCards
-          key={idx}
-          items={items}
-          direction={idx % 2 === 0 ? "right" : "left"}
-          speed="slow"
-          pauseOnHover={false}
-        />
-      ))}
-    </div>
+    </section>
   );
 }

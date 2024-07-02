@@ -6,7 +6,7 @@ import { Button } from "./ui/button";
 
 export default function About() {
   return (
-    <section id="ve-chung-toi">
+    <section id="gioi-thieu">
       <div className="container">
         <div className="space-y-12 py-6 sm:py-20">
           <div
@@ -24,30 +24,35 @@ export default function About() {
               />
             </div>
 
-            <div className="mt-6 gap-12 sm:mt-0 md:flex lg:block">
-              <div className="max-w-2xl">
+            <div className="mt-6 gap-12 sm:mt-0 md:flex lg:block space-y-10">
+              <div className="max-w-2xl space-y-10">
                 <SectionHeading>
-                  Giới thiệu sự kiện K-Tech Job Fair 2024
+                  Giới thiệu sự kiện <br /> K-Tech Job Fair 2024
                 </SectionHeading>
 
                 <div className="[&_p]:mb-3">
-                  <div>
+                  <div className="space-y-8">
                     <p>
-                      K-TECH JOB FAIR 2024 là sự kiện việc làm quy tụ nhiều
-                      doanh nghiệp Hàn Quốc do Chính Phủ Hàn Quốc tổ chức. Đây
-                      là sự kiện đặc biệt nhằm kết nối các doanh nghiệp Hàn Quốc
-                      tại Hàn Quốc và Việt Nam với các lập trình viên Việt Nam
-                      tài năng.
+                      <b>K-TECH JOB FAIR 2024</b> là sự kiện việc làm quy tụ
+                      nhiều <b>doanh nghiệp Hàn Quốc</b> do{" "}
+                      <b>Chính Phủ Hàn Quốc tổ chức.</b> Đây là sự kiện đặc biệt
+                      nhằm kết nối các doanh nghiệp Hàn Quốc tại Hàn Quốc và
+                      Việt Nam với các <b>lập trình viên Việt Nam tài năng.</b>
                     </p>
                     <p>
                       K-Tech Job Fair 2024 sẽ là nơi để các lập trình viên, sinh
-                      viên Việt Nam giao lưu, kết nối và tìm kiếm các đến cơ hội
-                      việc làm với mức lương và chính sách đãi ngộ cực hấp dẫn
+                      viên Việt Nam giao lưu và tìm kiếm các{" "}
+                      <b>
+                        cơ hội việc làm với mức lương và chính sách đãi ngộ cực
+                        hấp dẫn
+                      </b>{" "}
                       tại các công ty công nghệ Hàn Quốc.
                     </p>
                     <p>
-                      Chương trình hoàn toàn miễn phí. Đăng ký tham gia ngay hôm
-                      nay!
+                      <b className="text-orange-600">
+                        Chương trình hoàn toàn miễn phí
+                      </b>
+                      . Đăng ký tham gia ngay hôm nay!
                     </p>
                   </div>
                 </div>

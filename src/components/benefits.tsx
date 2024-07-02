@@ -37,7 +37,7 @@ export default function Benefits() {
   ];
 
   return (
-    <section className="py-14">
+    <section id="loi-ich-tham-gia" className="py-14">
       <div className="container text-gray-600">
         <div className="max-w-2xl mx-auto md:text-center text-left">
           <h2 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
@@ -49,7 +49,7 @@ export default function Benefits() {
             {features.map((item, idx) => (
               <li
                 key={idx}
-                className="p-6 rounded bg-orange-100 flex gap-6 items-center border-t-4"
+                className="p-6 rounded bg-orange-100 flex gap-6 items-center border-t-4 border-t-orange-200"
               >
                 <div className="text-orange-400">{item.icon}</div>
                 <h4>{item.title}</h4>
