@@ -9,6 +9,7 @@ import Countdown from "@/components/countdown";
 import { Navbar } from "@/components/navbar";
 import ThirdParties from "@/components/third-parties";
 import { cn } from "@/lib/utils";
+import { site } from "@/config/site";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -37,6 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     url: "./opengraph-image.jpg",
   },
+  metadataBase: new URL(site.baseUrl),
   formatDetection: {
     email: true,
     address: true,

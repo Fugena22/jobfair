@@ -1,5 +1,5 @@
 export const site = {
-  baseUrl: "http://ktechjobfair.likelion.edu.vn",
+  baseUrl: "https://ktechjobfair.likelion.edu.vn",
   routes: [
     { title: "Về chúng tôi", path: "#ve-chung-toi" },
     { title: "Chương trình đào tạo", path: "#chuong-trinh-dao-tao" },
