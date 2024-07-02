@@ -9,11 +9,9 @@ export default function Connection() {
   return (
     <section className="">
       <div className="container">
-        <div className="flex justify-center gap-20">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-20">
           <div className="space-y-8">
-            <SectionHeading className="font-bold text-4xl">
-              Tham gia nhóm Zalo ngay!
-            </SectionHeading>
+            <SectionHeading>Tham gia nhóm Zalo ngay!</SectionHeading>
 
             <div className="space-y-4 max-w-md">
               <div className="flex gap-4">

@@ -107,7 +107,7 @@ export default function FAQ() {
   ];
 
   return (
-    <section className="leading-relaxed sm:py-20 pt-14" id="faqs">
+    <section className="leading-relaxed sm:py-20 py-16" id="faqs">
       <div className="container">
         <div className="space-y-3 text-center">
           <h2 className="text-3xl font-semibold">Các câu hỏi thường gặp</h2>

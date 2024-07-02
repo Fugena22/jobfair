@@ -54,7 +54,7 @@ function splitCompanies(
 export default function Companies() {
   return (
     <section id="danh-sach-doanh-nghiep">
-      <div className="pb-14 rounded flex flex-col antialiased  items-center justify-center relative overflow-hidden space-y-10">
+      <div className="py-14 rounded flex flex-col antialiased  items-center justify-center relative overflow-hidden space-y-10">
         <div className="space-y-6 text-center">
           <SectionHeading>Các doanh nghiệp tham gia</SectionHeading>
           <p className="font-bold text-4xl">
