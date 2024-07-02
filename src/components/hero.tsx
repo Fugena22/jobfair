@@ -7,37 +7,42 @@ import { InfiniteMovingTexts } from "./shared/infinities-moving-texts";
 const tags = [
   {
     content: "30 công ty công nghệ Hàn Quốc",
-    position: {
+    style: {
       top: -40,
       left: "10%",
+      maxWidth: 180,
     },
   },
   {
     content: "Hàng trăm phần quà hấp dẫn",
-    position: {
+    style: {
       top: -20,
       right: -50,
+      maxWidth: 180,
     },
   },
   {
     content: "Tư vấn CV và kinh nghiệm phỏng vấn",
-    position: {
+    style: {
       top: "50%",
       right: -50,
+      maxWidth: 200,
     },
   },
   {
     content: "Hàng trăm cơ hội việc làm",
-    position: {
+    style: {
       bottom: -30,
       left: "30%",
+      maxWidth: 160,
     },
   },
   {
     content: "Phỏng vấn ngay tại sự kiện",
-    position: {
+    style: {
       top: "40%",
       left: -100,
+      maxWidth: 160,
     },
   },
 ];
@@ -51,8 +56,8 @@ const eventDetails = [
 export function Hero() {
   return (
     <section className="w-full py-12 md:py-20 bg-neutral-950 text-neutral-100">
-      <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-12">
-        <div className="space-y-4 max-w-sm mx-auto text-center lg:text-left flex flex-col items-center lg:items-start lg:mx-0">
+      <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-[1fr_2fr] lg:gap-12">
+        <div className="space-y-4 max-w-md mx-auto text-center lg:text-left flex flex-col items-center lg:items-start lg:mx-0">
           <Image
             src="https://res.cloudinary.com/dk3pxmymh/image/upload/v1719397500/likelion/ktc-jobfair-landing/KT%20jobfair%20-PNG.png"
             alt=""
@@ -104,8 +109,8 @@ export function Hero() {
               {tags.map((tag, idx) => (
                 <div
                   key={idx}
-                  className="absolute bg-neutral-950 text-neutral-50 p-2 lg:p-2 max-w-[180px] text-center text-balance rounded border border-orange-400 shadow-[4px_8px_12px_97,0,0.20]"
-                  style={tag.position}
+                  className="absolute bg-neutral-950 text-neutral-50 p-2 text-center rounded border border-orange-400 shadow-[4px_8px_12px_97,0,0.20]"
+                  style={tag.style}
                 >
                   {tag.content}
                 </div>

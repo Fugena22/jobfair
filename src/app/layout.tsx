@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 import Providers from "@/components/providers";
 import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
@@ -11,7 +11,7 @@ import ThirdParties from "@/components/third-parties";
 import { cn } from "@/lib/utils";
 import { site } from "@/config/site";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Source_Sans_3({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "K-Tech Job Fair 2024: Code your future in Korea",
@@ -57,11 +57,11 @@ export default function RootLayout({
 }>) {
   return (
     <Providers>
-      <html lang="en">
+      <html lang="en" suppressHydrationWarning className="scroll-smooth">
         <body
           className={cn(
             inter.className,
-            "overflow-x-hidden mb-10 sm:mb-0 bg-background text-foreground"
+            "antialiased overflow-x-hidden mb-10 sm:mb-0 bg-background text-foreground sm:mt-14"
           )}
         >
           <NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />

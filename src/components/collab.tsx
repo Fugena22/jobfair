@@ -28,10 +28,10 @@ export function Collab() {
             <Image
               key={index}
               src={logo.src}
-              width={200}
-              height={50}
+              width={234}
+              height={52}
               alt={logo.alt}
-              className="aspect-[4/1] overflow-hidden rounded object-contain object-center"
+              className="aspect-[234/52] overflow-hidden rounded object-contain object-center"
             />
           ))}
         </div>
