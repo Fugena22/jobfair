@@ -85,9 +85,9 @@ export function Hero() {
         <div>
           <div className="relative max-w-lg mx-auto mt-4 sm:mt-20 lg:mt-0">
             {/* Tags mobile */}
-            <div className="sm:hidden -mx-8 mb-8">
+            {/* <div className="sm:hidden -mx-8 mb-8">
               <InfiniteMovingTexts texts={tags.map((tag) => tag.content)} />
-            </div>
+            </div> */}
 
             <div className="w-full aspect-[1202/926] overflow-hidden">
               <Image

@@ -56,7 +56,9 @@ export default function RootLayout({
   return (
     <Providers>
       <html lang="en">
-        <body className={cn(inter.className, "overflow-x-hidden")}>
+        <body
+          className={cn(inter.className, "overflow-x-hidden mb-10 sm:mb-0")}
+        >
           <NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />
           <Countdown />
           <Navbar />
