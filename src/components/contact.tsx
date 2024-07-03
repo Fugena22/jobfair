@@ -12,7 +12,7 @@ export default function Contact() {
     },
     {
       icon: <Mail className="size-6" />,
-      contact: "likelion.vn@likelion.net",
+      contact: "recruitment@likelion.net",
       title: "Email",
     },
     {

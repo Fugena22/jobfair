@@ -33,7 +33,7 @@ export default function Steps() {
               <li key={idx} className="flex-1">
                 <div className="flex items-center gap-8 lg:flex-col lg:gap-2 lg:items-start text-sm lg:text-base">
                   <div className="flex items-center lg:w-full gap-2">
-                    <div className="size-14 rounded-full text-2xl grid place-items-center bg-primary text-primary-foreground shrink-0">
+                    <div className="size-14 rounded-full text-2xl grid place-items-center bg-orange-600 text-primary-foreground shrink-0">
                       {step.icon}
                     </div>
                     {idx < steps.length - 1 && (

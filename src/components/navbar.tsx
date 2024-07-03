@@ -46,7 +46,9 @@ export function Navbar() {
                   </Link>
                 ))}
                 <Button asChild>
-                  <Link href="/dang-ky">Đăng ký ngay</Link>
+                  <Link href="/dang-ky" target="_blank">
+                    Đăng ký ngay
+                  </Link>
                 </Button>
               </nav>
               <Sheet>
@@ -73,7 +75,9 @@ export function Navbar() {
                     ))}
                   </div>
                   <Button className="w-full" asChild>
-                    <Link href="/dang-ky">Đăng ký ngay</Link>
+                    <Link href="/dang-ky" target="_blank">
+                      Đăng ký ngay
+                    </Link>
                   </Button>
                 </SheetContent>
               </Sheet>

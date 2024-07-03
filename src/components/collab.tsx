@@ -23,7 +23,7 @@ export function Collab() {
         <div className="space-y-3">
           <SectionHeading>Đơn vị tổ chức</SectionHeading>
         </div>
-        <div className="flex items-center justify-center gap-8 md:gap-24">
+        <div className="flex items-center justify-between gap-8 md:gap-24">
           {partnerLogos.map((logo, index) => (
             <Image
               key={index}

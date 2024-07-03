@@ -33,7 +33,9 @@ export default function CTA() {
             </div>
             <div className="items-center gap-3 mt-4 sm:flex">
               <Button size="lg" className="w-full sm:w-auto" asChild>
-                <Link href="/dang-ky">Đăng ký ngay</Link>
+                <Link href="/dang-ky" target="_blank">
+                  Đăng ký ngay
+                </Link>
               </Button>
             </div>
           </div>

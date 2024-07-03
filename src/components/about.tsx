@@ -60,7 +60,9 @@ export default function About() {
 
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
                 <Button asChild>
-                  <Link href="/dang-ky">Đăng ký ngay</Link>
+                  <Link href="/dang-ky" target="_blank">
+                    Đăng ký ngay
+                  </Link>
                 </Button>
               </div>
             </div>

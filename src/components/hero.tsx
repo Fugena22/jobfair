@@ -74,7 +74,9 @@ export function Hero() {
 
           <div className="flex flex-col gap-2 min-[400px]:flex-row">
             <Button size="lg" asChild>
-              <Link href="/dang-ky">Đăng ký ngay</Link>
+              <Link href="/dang-ky" target="_blank">
+                Đăng ký ngay
+              </Link>
             </Button>
           </div>
 

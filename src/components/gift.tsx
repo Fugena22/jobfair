@@ -19,7 +19,7 @@ export default function Gift() {
 
           <div>
             <Image
-              src="https://res.cloudinary.com/dk3pxmymh/image/upload/v1719389861/likelion/ktc-jobfair-landing/Element_Qua%CC%80_ta%CC%A3%CC%86ng_k6ioy2.png"
+              src="https://res.cloudinary.com/dk3pxmymh/image/upload/v1719892962/likelion/ktc-jobfair-landing/Q%C3%B9a%20t%E1%BA%B7ng.png"
               alt="Gift"
               width={600}
               height={380}

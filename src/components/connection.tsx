@@ -31,7 +31,7 @@ export default function Connection() {
 
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
               <Button asChild>
-                <Link href="/">Tham gia ngay</Link>
+                <Link href="https://zalo.me/g/fbwkou283">Tham gia ngay</Link>
               </Button>
             </div>
           </div>

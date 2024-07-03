@@ -52,7 +52,9 @@ const renderer = ({
 
         <div className="hidden sm:flex justify-end">
           <Button className="invisible" asChild>
-            <Link href="/dang-ky">Đăng ký ngay</Link>
+            <Link href="/dang-ky" target="_blank">
+              Đăng ký ngay
+            </Link>
           </Button>
         </div>
       </div>
