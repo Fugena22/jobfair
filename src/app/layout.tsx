@@ -10,6 +10,8 @@ import { Navbar } from "@/components/navbar";
 import ThirdParties from "@/components/third-parties";
 import { cn } from "@/lib/utils";
 import { site } from "@/config/site";
+import Footer from "@/components/footer";
+import MessengerChat from "@/components/messenger";
 
 const inter = Source_Sans_3({ subsets: ["latin"] });
 
@@ -68,7 +70,11 @@ export default function RootLayout({
           <Countdown />
           <Navbar />
           {children}
+          {/* <div className="flex flex-col gap-4">
+            <MessengerChat />
+          </div> */}
           <ThirdParties />
+          <Footer />
         </body>
       </html>
     </Providers>

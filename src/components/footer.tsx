@@ -39,23 +39,28 @@ export default function Footer() {
             &copy; 2024 LIKELION All rights reserved.
           </div>
           <div className="mt-6 sm:mt-0">
-            <ul className="flex items-center space-x-4">
-              {socials.map((social, idx) => (
-                <li
-                  className="w-10 h-10 border rounded-full flex items-center justify-center"
-                  key={idx}
-                >
-                  <Link href={social.href} target="_blank">
-                    <Image
-                      src={social.src}
-                      alt={social.label}
-                      width={32}
-                      height={32}
-                    />
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <div className="flex items-center gap-10">
+              <ul className="flex items-center space-x-4">
+                {socials.map((social, idx) => (
+                  <li
+                    className="w-10 h-10 border rounded-full flex items-center justify-center"
+                    key={idx}
+                  >
+                    <Link href={social.href} target="_blank">
+                      <Image
+                        src={social.src}
+                        alt={social.label}
+                        width={32}
+                        height={32}
+                      />
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+              <Link href="/chinh-sach-bao-mat" target="_blank">
+                Chính sách bảo mật
+              </Link>
+            </div>
           </div>
         </div>
       </div>
