@@ -19,7 +19,7 @@ export default function ThirdParties() {
           __html: `window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'G-CZNCR7MCL2'), { 'debug_mode':true });`,
+          gtag('config', 'G-CZNCR7MCL2', { 'debug_mode':true });`,
         }}
       ></Script>
 
