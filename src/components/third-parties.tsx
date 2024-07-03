@@ -7,7 +7,21 @@ export default function ThirdParties() {
   return (
     <div>
       {/* Google Analytics */}
-      <GoogleAnalytics gaId="G-CZNCR7MCL2" />
+      {/* <GoogleAnalytics gaId="G-CZNCR7MCL2" /> */}
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-CZNCR7MCL2"
+      />
+      <Script
+        id="meta-pixel"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-CZNCR7MCL2');`,
+        }}
+      ></Script>
 
       {/* <!-- Meta Pixel Code --> */}
       <Script
