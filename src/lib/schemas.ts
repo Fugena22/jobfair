@@ -37,7 +37,7 @@ export const registerDataSchema = z.object({
   experience_years: z
     .number()
     .int()
-    .min(0, "Vui lòng không bỏ trống thông tin"),
+    .min(0, "Vui lòng nhập đúng số năm kinh nghiệm"),
   major: z.string().min(2, "Vui lòng không bỏ trống thông tin"),
   cv_url: z
     .string()
@@ -58,6 +58,9 @@ export const registerFormSchema = registerDataSchema
       .refine((file) => file.size <= MAX_FILE_SIZE * 1024 * 1024, {
         message: `Kích thước tệp không được vượt quá 4MB`,
       }),
+    agree: z.boolean().refine((val) => val === true, {
+      message: "Bạn phải đồng ý với Chính sách bảo mật để tiếp tục.",
+    }),
   });
 
 export const registerPostSchema = registerDataSchema.omit({});

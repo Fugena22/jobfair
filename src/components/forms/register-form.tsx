@@ -13,6 +13,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Checkbox } from "@/components/ui/checkbox";
 
 // import { doc } from "@/lib/spreadsheet";
 import { useMutation } from "@tanstack/react-query";
@@ -27,6 +28,7 @@ import { useUploadThing } from "@/utils/uploadthing";
 import FormFieldInput from "./form-fields/form-field-input";
 import { useRouter } from "next/navigation";
 import FormItemWrapper from "./form-fields/form-item-wrapper";
+import Link from "next/link";
 
 type IRegisterForm = z.infer<typeof registerFormSchema>;
 
@@ -49,6 +51,7 @@ export default function RegisterForm() {
       phone: "",
       experience_years: 0,
       major: "",
+      agree: false,
     },
   });
 
@@ -161,6 +164,37 @@ export default function RegisterForm() {
             </FormItemWrapper>
           )}
         />
+        <FormField
+          control={form.control}
+          name="agree"
+          render={({ field }) => (
+            <FormItem>
+              <div className="flex flex-row items-start space-x-3 space-y-0">
+                <FormControl>
+                  <Checkbox
+                    checked={field.value}
+                    onCheckedChange={(checked) => {
+                      field.onChange(checked);
+                    }}
+                  />
+                </FormControl>
+                <FormLabel className="font-normal">
+                  Tôi đã đọc và đồng ý với{" "}
+                  <Link
+                    href="/chinh-sach-bao-mat"
+                    className="font-bold text-primary"
+                  >
+                    Chính sách bảo mật{" "}
+                  </Link>
+                  của chương trình
+                </FormLabel>
+              </div>
+
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
         <Button type="submit" className="w-full" disabled={isSubmitting}>
           {isUploading
             ? "Vui lòng đợi trong giây lát.. "
