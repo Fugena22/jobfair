@@ -10,7 +10,7 @@ import { usePathname, useRouter } from "next/navigation";
 
 const navItems = [
   { href: "#gioi-thieu", text: "Giới thiệu" },
-  { href: "#danh-sach-doanh-nghiep", text: "Danh sách doanh nghiệp" },
+  // { href: "#danh-sach-doanh-nghiep", text: "Danh sách doanh nghiệp" },
   { href: "#loi-ich-tham-gia", text: "Lợi ích tham gia" },
   { href: "#doi-tuong", text: "Đối tượng" },
   { href: "#hoat-dong-chinh", text: "Hoạt động chính" },
