@@ -108,24 +108,24 @@ export default function FAQ() {
   ];
 
   return (
-    <BlobWrapper
-      blobStyle={{
-        left: "-40%",
-        top: 100,
-      }}
-    >
-      <section className="leading-relaxed sm:py-20 py-16" id="faqs">
-        <div className="container">
-          <div className="space-y-3 text-center">
-            <h2 className="text-3xl font-semibold">Các câu hỏi thường gặp</h2>
-          </div>
-          <div className="mt-14 max-w-2xl mx-auto">
-            {faqsList.map((item, idx) => (
-              <FaqsCard key={idx} idx={idx} faqsList={item} />
-            ))}
-          </div>
+    // <BlobWrapper
+    //   blobStyle={{
+    //     left: "-40%",
+    //     top: 100,
+    //   }}
+    // >
+    <section className="leading-relaxed sm:py-20 py-16" id="faqs">
+      <div className="container">
+        <div className="space-y-3 text-center">
+          <h2 className="text-3xl font-semibold">Các câu hỏi thường gặp</h2>
         </div>
-      </section>
-    </BlobWrapper>
+        <div className="mt-14 max-w-2xl mx-auto">
+          {faqsList.map((item, idx) => (
+            <FaqsCard key={idx} idx={idx} faqsList={item} />
+          ))}
+        </div>
+      </div>
+    </section>
+    // </BlobWrapper>
   );
 }
