@@ -14,18 +14,16 @@ export function Activities() {
       <div className="container">
         <div className="flex flex-col items-center">
           <SectionHeading className="mb-10">Các hoạt động chính</SectionHeading>
-          <div className="border -lg w-full max-w-3xl mx-auto">
-            <div className="relative w-full overflow-auto">
-              <Table className="mx-auto max-w-full">
+          <div className="w-full max-w-xl mx-auto">
+            <div className="relative w-full">
+              <Table className="rounded">
                 <TableHeader>
-                  <TableRow className="bg-orange-600 border-orange-200">
-                    <TableHead className="w-[150px] text-orange-50">
-                      Thời gian
-                    </TableHead>
-                    <TableHead className="text-orange-50">Hoạt động</TableHead>
+                  <TableRow className="">
+                    <TableHead className="w-[150px] ">Thời gian</TableHead>
+                    <TableHead>Hoạt động</TableHead>
                   </TableRow>
                 </TableHeader>
-                <TableBody className="bg-orange-50 border-orange-200">
+                <TableBody className="rounded">
                   <TableRow>
                     <TableCell>8:00 - 9:00</TableCell>
                     <TableCell>Đón tiếp khách mời & Tham quan</TableCell>
