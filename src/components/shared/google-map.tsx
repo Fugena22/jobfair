@@ -6,7 +6,7 @@ export default function GoogleMap() {
         allowFullScreen
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
-        className="w-full h-[50vh]"
+        className="w-full h-[40vh]"
       ></iframe>
     </div>
   );

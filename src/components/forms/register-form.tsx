@@ -183,6 +183,7 @@ export default function RegisterForm() {
                   <Link
                     href="/chinh-sach-bao-mat"
                     className="font-bold text-primary"
+                    target="_blank"
                   >
                     Chính sách bảo mật{" "}
                   </Link>
