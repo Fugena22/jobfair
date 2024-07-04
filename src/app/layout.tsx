@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   },
   referrer: "origin-when-cross-origin",
   other: {
-    "google-site-verification": "vL_u6FxISM0MCh1PYw2r4vhgMEHkbBTpBuSM9wStdoU",
+    "google-site-verification": "To9bBudd-R7vTgpZ5KCCm4DUwwuMpfI44qhAU2EwfqE",
   },
 };
 
