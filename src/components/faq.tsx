@@ -1,5 +1,6 @@
 "use client";
 import { ReactNode, useRef, useState } from "react";
+import BlobWrapper from "./blob-wrapper";
 
 interface FaqsCardProps {
   faqsList: {
@@ -107,17 +108,24 @@ export default function FAQ() {
   ];
 
   return (
-    <section className="leading-relaxed sm:py-20 py-16" id="faqs">
-      <div className="container">
-        <div className="space-y-3 text-center">
-          <h2 className="text-3xl font-semibold">Các câu hỏi thường gặp</h2>
+    <BlobWrapper
+      blobStyle={{
+        left: "-40%",
+        top: 100,
+      }}
+    >
+      <section className="leading-relaxed sm:py-20 py-16" id="faqs">
+        <div className="container">
+          <div className="space-y-3 text-center">
+            <h2 className="text-3xl font-semibold">Các câu hỏi thường gặp</h2>
+          </div>
+          <div className="mt-14 max-w-2xl mx-auto">
+            {faqsList.map((item, idx) => (
+              <FaqsCard key={idx} idx={idx} faqsList={item} />
+            ))}
+          </div>
         </div>
-        <div className="mt-14 max-w-2xl mx-auto">
-          {faqsList.map((item, idx) => (
-            <FaqsCard key={idx} idx={idx} faqsList={item} />
-          ))}
-        </div>
-      </div>
-    </section>
+      </section>
+    </BlobWrapper>
   );
 }
