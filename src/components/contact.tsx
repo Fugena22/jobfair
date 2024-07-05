@@ -38,8 +38,8 @@ export default function Contact() {
       alt: "COSME Logo",
     },
     {
-      src: "https://res.cloudinary.com/dk3pxmymh/image/upload/v1719474731/likelion/ktc-jobfair-landing/LOGO/Likelion_s0na5s.svg",
-      alt: "LIKELION Logo",
+      src: "https://res.cloudinary.com/dk3pxmymh/image/upload/v1720167432/likelion/ktc-jobfair-landing/LOGO/OITI_b2z2er.png",
+      alt: "Oiti Logo",
     },
   ];
 
