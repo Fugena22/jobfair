@@ -31,7 +31,7 @@ export function Collab() {
               width={234}
               height={52}
               alt={logo.alt}
-              className="w-auto aspect-[234/52] overflow-hidden rounded object-contain object-center"
+              className="w-auto overflow-hidden rounded object-contain object-center"
             />
           ))}
         </div>

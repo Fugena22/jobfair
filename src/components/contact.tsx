@@ -54,7 +54,7 @@ export default function Contact() {
               width={200}
               height={50}
               alt={logo.alt}
-              className="w-auto aspect-[4/1] overflow-hidden rounded object-contain object-center"
+              className="w-auto overflow-hidden rounded object-contain object-center"
             />
           ))}
         </div>
