@@ -11,7 +11,7 @@ const partnerLogos = [
     alt: "COSME Logo",
   },
   {
-    src: "https://res.cloudinary.com/dk3pxmymh/image/upload/v1720167432/likelion/ktc-jobfair-landing/LOGO/OITI_b2z2er.png",
+    src: "https://res.cloudinary.com/dk3pxmymh/image/upload/v1720171190/likelion/ktc-jobfair-landing/LOGO/OITI_SVG_mk6dny.svg",
     alt: "Oiti Logo",
   },
 ];
