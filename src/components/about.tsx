@@ -16,7 +16,7 @@ export default function About() {
           >
             <div className="hidden lg:block lg:max-w-xl">
               <Image
-                src="https://res.cloudinary.com/dk3pxmymh/image/upload/v1719389862/likelion/ktc-jobfair-landing/Gio%CC%9B%CC%81i_thie%CC%A3%CC%82u_mk0321.png"
+                src="https://res.cloudinary.com/dk3pxmymh/image/upload/v1720172600/likelion/ktc-jobfair-landing/Gi%E1%BB%9Bi%20thi%E1%BB%87u%20ch%C6%B0%C6%A1ng%20tr%C3%ACnh.png"
                 className="rounded"
                 width={628}
                 height={459}
