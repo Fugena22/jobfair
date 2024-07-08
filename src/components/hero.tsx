@@ -59,10 +59,18 @@ export function Hero() {
       <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-[1fr_2fr] lg:gap-12">
         <div className="space-y-4 max-w-md mx-auto text-center lg:text-left flex flex-col items-center lg:items-start lg:mx-0">
           <Image
-            src="https://res.cloudinary.com/dk3pxmymh/image/upload/v1719397500/likelion/ktc-jobfair-landing/KT%20jobfair%20-PNG.png"
+            src="https://res.cloudinary.com/dk3pxmymh/image/upload/v1720410916/likelion/ktc-jobfair-landing/LOGO/Typo_ngang_a7rlnv.svg"
             alt=""
             width={273}
             height={114}
+            className="hidden md:block"
+          />
+          <Image
+            src="https://res.cloudinary.com/dk3pxmymh/image/upload/v1720410915/likelion/ktc-jobfair-landing/LOGO/Job_Fair_Typo_hnrbpd.svg"
+            alt=""
+            width={273}
+            height={114}
+            className="md:hidden"
           />
 
           <h3 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-3xl">
