@@ -12,7 +12,6 @@ import { cn } from "@/lib/utils";
 import { site } from "@/config/site";
 import Footer from "@/components/footer";
 import MessengerChat from "@/components/messenger";
-import PopUp from "@/components/pop-up";
 
 const inter = Source_Sans_3({ subsets: ["latin"] });
 
@@ -68,10 +67,6 @@ export default function RootLayout({
           )}
         >
           <ThirdParties />
-          <PopUp
-            label="JobFair"
-            src="https://res.cloudinary.com/dk3pxmymh/image/upload/v1720411086/likelion/ktc-jobfair-landing/Popup_chu%CC%9Bo%CC%9Bng_tri%CC%80nh_gwzc20.png"
-          />
           <NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />
           <Countdown />
           <Navbar />
