@@ -66,7 +66,6 @@ export default function RootLayout({
             "antialiased overflow-x-hidden mb-10 sm:mb-0 bg-background text-foreground sm:mt-14"
           )}
         >
-          <ThirdParties />
           <NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />
           <Countdown />
           <Navbar />
@@ -77,6 +76,7 @@ export default function RootLayout({
             </div>
           </div>
           <Footer />
+          <ThirdParties />
         </body>
       </html>
     </Providers>
