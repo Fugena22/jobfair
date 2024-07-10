@@ -70,7 +70,7 @@ export default function RootLayout({
           <Countdown />
           <Navbar />
           {children}
-          <div className="fixed bottom-4 right-4 sm:bottom-8 sm:right-8">
+          <div className="fixed bottom-10 right-4 sm:bottom-8 sm:right-8 z-50">
             <div className="flex flex-col gap-4">
               <MessengerChat />
             </div>

@@ -7,6 +7,7 @@ import Connection from "@/components/connection";
 import Contact from "@/components/contact";
 import CTA from "@/components/cta";
 import FAQ from "@/components/faq";
+import FloatingCTA from "@/components/floating-cta";
 import Gift from "@/components/gift";
 import { Hero } from "@/components/hero";
 import Steps from "@/components/steps";
@@ -28,6 +29,7 @@ export default function Home() {
       <FAQ />
       <Connection />
       <Contact />
+      <FloatingCTA />
     </div>
   );
 }
