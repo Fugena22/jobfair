@@ -182,7 +182,7 @@ export default function RegisterForm() {
                   Tôi đã đọc và đồng ý với{" "}
                   <Link
                     href="/chinh-sach-bao-mat"
-                    className="font-bold text-primary"
+                    className="font-bold text-pink-600"
                     target="_blank"
                   >
                     Chính sách bảo mật{" "}
@@ -196,7 +196,11 @@ export default function RegisterForm() {
           )}
         />
 
-        <Button type="submit" className="w-full" disabled={isSubmitting}>
+        <Button
+          type="submit"
+          className="w-full bg-pink-600"
+          disabled={isSubmitting}
+        >
           {isUploading
             ? "Vui lòng đợi trong giây lát.. "
             : isPending

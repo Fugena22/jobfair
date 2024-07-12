@@ -31,7 +31,7 @@ export default function CVDropzone({
       <div
         className={cn(
           "text-center border-dashed border-2 rounded  px-8 h-28 flex items-center bg-neutral-50",
-          isDragActive && "bg-orange-50",
+          isDragActive && "bg-pink-50",
           file && "border-success border-solid",
           disabled && "cursor-not-allowed opacity-50"
         )}
