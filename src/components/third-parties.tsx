@@ -8,6 +8,10 @@ export default function ThirdParties() {
     <>
       {/* Google Analytics */}
       <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-CZNCR7MCL2"
+      />
+      <Script
         id="ga4"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
